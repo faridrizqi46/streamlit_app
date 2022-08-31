@@ -22,12 +22,12 @@ values = [146718.0, -1.23764919546118,1.25255541561598,-0.511406359762841,0.4411
   -1.06098775032359,0.310410104985635,-0.0061449501392005,0.0545727916384982, 1.08316534080046,-0.149417502435938,
   -1.60713801034613,-0.0950790561150539,-0.38270084720437,-0.516437451087927,-0.420305484015155,23.93, 0]
 
-std_amount = joblib.load('pages\\model\\card_fraud\\amount_scale.save')
-std_time = joblib.load('pages\\model\\card_fraud\\time_scale.save')
-model = joblib.load('pages\\model\\card_fraud\\model.pkl')
+std_amount = joblib.load('pages/model/card_fraud/amount_scale.save')
+std_time = joblib.load('pages/model/card_fraud/time_scale.save')
+model = joblib.load('pages/model/card_fraud/model.pkl')
 
 df_example = pd.DataFrame(data = [values], columns = columns)
-df = pd.read_csv('pages\\model\\card_fraud\\balance_df1.csv')
+df = pd.read_csv('pages/model/card_fraud/balance_df1.csv')
 
 st.dataframe(df_example)
 
