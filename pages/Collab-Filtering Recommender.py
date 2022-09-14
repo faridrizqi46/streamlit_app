@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load('pages/model/anime_collab_filter/model_first.pkl')
+model = joblib.load('pages/model/anime_collab_filter/model_5.pkl')
 df_anime = pd.read_csv('pages/model/anime_collab_filter/df_anime.csv')
 df_rating = pd.read_csv('pages/model/anime_collab_filter/df_rating.csv')
 
