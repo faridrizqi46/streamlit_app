@@ -23,7 +23,7 @@ def recommend(user_id=user_id):
         pred_score.append(score[i].est)
     df_pred = pd.DataFrame({'anime_id':anime_id, 'pred_score':pred_score})
     df_pred_real = df_pred.sort_values('pred_score', ascending=False).head(10)
-    df_pred_real.merge(df_anime, how='left', on='anime_id')
+    df_pred_real = df_pred_real.merge(df_anime, how='left', on='anime_id')
     return df_pred_real
 
 if st.button('Generate Anime Recommendation'):
